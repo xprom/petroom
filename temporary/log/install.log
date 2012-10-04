@@ -1,0 +1,23 @@
+2012-09-07T01:55:35+00:00 NOTICE (5): [8] Undefined offset: 0 (N:\home\localhost\www\application\libraries\Zend\Translate\Adapter.php) [740]
+Error Code: c029de
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\Form.php(2288): Zend_Translate_Adapter->translate(Array)
+#1 N:\home\localhost\www\application\libraries\Engine\Form\Decorator\FormErrors.php(366): Zend_Form->getMessages()
+#2 N:\home\localhost\www\application\libraries\Engine\Form\Decorator\FormErrors.php(68): Engine_Form_Decorator_FormErrors->_recurseForm(Install_Form_DbInfo, Zend_View)
+#3 N:\home\localhost\www\application\libraries\Zend\Form.php(2644): Engine_Form_Decorator_FormErrors->render('<div class="form-elements">
+<di...')
+#4 N:\home\localhost\www\install\views\scripts\install\db-info.tpl(24): Zend_Form->render(Zend_View)
+#5 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\install\vi...')
+#6 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\install\vi...')
+#7 N:\home\localhost\www\application\libraries\Zend\Controller\Action\Helper\ViewRenderer.php(903): Zend_View_Abstract->render('install/db-info.tpl')
+#8 N:\home\localhost\www\application\libraries\Zend\Controller\Action\Helper\ViewRenderer.php(924): Zend_Controller_Action_Helper_ViewRenderer->renderScript('install/db-info.tpl', )
+#9 N:\home\localhost\www\application\libraries\Zend\Controller\Action\Helper\ViewRenderer.php(963): Zend_Controller_Action_Helper_ViewRenderer->render()
+#10 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#11 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#12 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('dbInfoAction')
+#13 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#14 N:\home\localhost\www\application\libraries\Zend\Application\Bootstrap\Bootstrap.php(77): Zend_Controller_Front->dispatch()
+#15 N:\home\localhost\www\application\libraries\Zend\Application.php(358): Zend_Application_Bootstrap_Bootstrap->run()
+#16 N:\home\localhost\www\install\index.php(87): Zend_Application->run()
+#17 {main}
+
