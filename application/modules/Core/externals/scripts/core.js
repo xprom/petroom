@@ -230,6 +230,71 @@ window.addEvent('load', function(){
         return false;
   })
 
+  /**
+  * slider
+  */
+  window['next_slider_speed'] = 5500;
+  window['curent_slider_position'] = 0;
+  window['next_slider'] = function(){
+    var eq = $$('.navigator a').indexOf( $$('.navigator a.active')[0] );
+    eq++;
+    if(eq>=4)
+        eq = 0;
+
+    $$('.navigator a')[eq].click();
+    return false;
+  }
+  window['slider_time'] = window.setTimeout('next_slider();',window['next_slider_speed']);
+
+  $$('.navigator a').addEvent('click',function(event){
+        if( this.hasClass('active'))
+            return false;
+
+        clearTimeout(window['slider_time']);
+
+        event.stop();
+        $$('#intro-holder .el').get('tween').each(function(item){
+            item.stop(0);
+        });
+
+
+        window['b'] = true;
+
+
+        $$('.navigator a').removeClass('active');
+        this.addClass('active');
+        var eq2 = $$('.navigator a').indexOf(this);
+
+        ~function(eq2){
+            $$('#intro-holder .el')[window['curent_slider_position']].set('tween',{
+                duration: 'long',
+                onComplete:function(){
+                    if(!window['b'])
+                        return;
+
+                    window['b'] = false;
+                    $$('#intro-holder .el').get('tween').each(function(){
+                        this.stop();
+                    });
+
+                    $$('#intro-holder .el')[window['curent_slider_position']].set('tween',{
+                        duration:'long',
+                        onComplete:function(){
+                            clearTimeout(window['slider_time']);
+                            window['slider_time'] = window.setTimeout('next_slider();',window['next_slider_speed']);
+                        }
+                    });
+
+                    var eq2 = $$('.navigator a').indexOf( $$('.navigator a.active')[0] );
+                    $$('#intro-holder .el')[eq2].tween('opacity', 1);
+                }
+            });
+            $$('#intro-holder .el').tween('opacity', 0);
+        }(eq2);
+
+        return false;
+  })
+
 });
 
 // This is experimental
