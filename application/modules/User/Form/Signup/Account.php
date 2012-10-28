@@ -24,9 +24,10 @@ class User_Form_Signup_Account extends Engine_Form
     $settings = Engine_Api::_()->getApi('settings', 'core');
     $inviteSession = new Zend_Session_Namespace('invite');
     $tabIndex = 1;
-    
+
     // Init form
     $this->setTitle('Create Account');
+    $this->setAttrib('id', 'user_form_login');
 
     // Element: email
     $this->addElement('Text', 'email', array(
@@ -43,9 +44,10 @@ class User_Form_Signup_Account extends Engine_Form
         'StringTrim'
       ),
       // fancy stuff
-      'inputType' => 'email',
+      'inputType' => 'text',
       'autofocus' => 'autofocus',
       'tabindex' => $tabIndex++,
+      'class' => 'text radius',
     ));
     $this->email->getDecorator('Description')->setOptions(array('placement' => 'APPEND'));
     $this->email->getValidator('NotEmpty')->setMessage('Please enter a valid email address.', 'isEmpty');
@@ -55,7 +57,7 @@ class User_Form_Signup_Account extends Engine_Form
     $bannedEmailValidator = new Engine_Validate_Callback(array($this, 'checkBannedEmail'), $this->email);
     $bannedEmailValidator->setMessage("This email address is not available, please use another one.");
     $this->email->addValidator($bannedEmailValidator);
-    
+
     if( !empty($inviteSession->invite_email) ) {
       $this->email->setValue($inviteSession->invite_email);
     }
@@ -64,7 +66,7 @@ class User_Form_Signup_Account extends Engine_Form
     //  $this->email->addValidator('Identical', true, array($inviteSession->invite_email));
     //  $this->email->getValidator('Identical')->setMessage('Your email address must match the address that was invited.', 'notSame');
     //}
-    
+
     // Element: code
     if( $settings->getSetting('user.signup.inviteonly') > 0 ) {
       $codeValidator = new Engine_Validate_Callback(array($this, 'checkInviteCode'), $this->email);
@@ -80,9 +82,9 @@ class User_Form_Signup_Account extends Engine_Form
       }
     }
 
-    if( $settings->getSetting('user.signup.random', 0) == 0 && 
-        empty($_SESSION['facebook_signup']) && 
-        empty($_SESSION['twitter_signup']) && 
+    if( $settings->getSetting('user.signup.random', 0) == 0 &&
+        empty($_SESSION['facebook_signup']) &&
+        empty($_SESSION['twitter_signup']) &&
         empty($_SESSION['janrain_signup']) ) {
 
       // Element: password
@@ -96,6 +98,7 @@ class User_Form_Signup_Account extends Engine_Form
           array('StringLength', false, array(6, 32)),
         ),
         'tabindex' => $tabIndex++,
+        'class' => 'text radius',
       ));
       $this->password->getDecorator('Description')->setOptions(array('placement' => 'APPEND'));
       $this->password->getValidator('NotEmpty')->setMessage('Please enter a valid password.', 'isEmpty');
@@ -109,6 +112,7 @@ class User_Form_Signup_Account extends Engine_Form
           array('NotEmpty', true),
         ),
         'tabindex' => $tabIndex++,
+        'class' => 'text radius',
       ));
       $this->passconf->getDecorator('Description')->setOptions(array('placement' => 'APPEND'));
       $this->passconf->getValidator('NotEmpty')->setMessage('Please make sure the "password" and "password again" fields match.', 'isEmpty');
@@ -141,6 +145,7 @@ class User_Form_Signup_Account extends Engine_Form
         ),
         'tabindex' => $tabIndex++,
           //'onblur' => 'var el = this; en4.user.checkUsernameTaken(this.value, function(taken){ el.style.marginBottom = taken * 100 + "px" });'
+        'class' => 'text radius',
       ));
       $this->username->getDecorator('Description')->setOptions(array('placement' => 'APPEND', 'escape' => false));
       $this->username->getValidator('NotEmpty')->setMessage('Please enter a valid profile address.', 'isEmpty');
@@ -153,7 +158,7 @@ class User_Form_Signup_Account extends Engine_Form
       $bannedUsernameValidator->setMessage("This profile address is not available, please use another one.");
       $this->username->addValidator($bannedUsernameValidator);
     }
-    
+
     // Element: profile_type
     $topStructure = Engine_Api::_()->fields()->getFieldStructureTop('user');
     if( count($topStructure) == 1 && $topStructure[0]->getChild()->type == 'profile_type' ) {
@@ -236,7 +241,7 @@ class User_Form_Signup_Account extends Engine_Form
 
     // Prepare language name list
     $localeObject = Zend_Registry::get('Locale');
-    
+
     $languageNameList = array();
     $languageDataList = Zend_Locale_Data::getList($localeObject, 'language');
     $territoryDataList = Zend_Locale_Data::getList($localeObject, 'territory');
@@ -262,7 +267,7 @@ class User_Form_Signup_Account extends Engine_Form
     }
     else{
       $this->addElement('Hidden', 'language', array(
-        'value' => current((array)$languageNameList) 
+        'value' => current((array)$languageNameList)
       ));
     }
 
@@ -272,7 +277,7 @@ class User_Form_Signup_Account extends Engine_Form
         'tabindex' => $tabIndex++,
       )));
     }
-    
+
     if( $settings->getSetting('user.signup.terms', 1) == 1 ) {
       // Element: terms
       $description = Zend_Registry::get('Zend_Translate')->_('I have read and agree to the <a target="_blank" href="%s/help/terms">terms of service</a>.');
@@ -306,7 +311,7 @@ class User_Form_Signup_Account extends Engine_Form
       'ignore' => true,
       'tabindex' => $tabIndex++,
     ));
-    
+
     if( empty($_SESSION['facebook_signup']) ){
       // Init facebook login link
 //      if( 'none' != $settings->getSetting('core_facebook_enable', 'none')
@@ -316,7 +321,7 @@ class User_Form_Signup_Account extends Engine_Form
 //        ));
 //      }
     }
-    
+
     if( empty($_SESSION['twitter_signup']) ){
       // Init twitter login link
 //      if( 'none' != $settings->getSetting('core_twitter_enable', 'none')
@@ -325,7 +330,7 @@ class User_Form_Signup_Account extends Engine_Form
 //          'content' => User_Model_DbTable_Twitter::loginButton(),
 //        ));
 //      }
-    } 
+    }
     // Set default action
     $this->setAction(Zend_Controller_Front::getInstance()->getRouter()->assemble(array(), 'user_signup', true));
   }
@@ -342,11 +347,11 @@ class User_Form_Signup_Account extends Engine_Form
       ->from($inviteTable->info('name'), 'COUNT(*)')
       ->where('code = ?', $value)
       ;
-      
+
     if( Engine_Api::_()->getApi('settings', 'core')->getSetting('user.signup.checkemail') ) {
       $select->where('recipient LIKE ?', $emailElement->getValue());
     }
-    
+
     return (bool) $select->query()->fetchColumn(0);
   }
 

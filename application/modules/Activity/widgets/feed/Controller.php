@@ -46,7 +46,7 @@ class Activity_Widget_FeedController extends Engine_Content_Widget_Abstract
     $this->view->checkUpdate      = $request->getParam('checkUpdate');
     $this->view->action_id        = (int) $request->getParam('action_id');
     $this->view->post_failed      = (int) $request->getParam('pf');
-    
+
     if( $feedOnly ) {
       $this->getElement()->removeDecorator('Title');
       $this->getElement()->removeDecorator('Container');
@@ -54,7 +54,7 @@ class Activity_Widget_FeedController extends Engine_Content_Widget_Abstract
     if( $length > 50 ) {
       $this->view->length = $length = 50;
     }
-    
+
     // Get all activity feed types for custom view?
 //    $actionTypesTable = Engine_Api::_()->getDbtable('actionTypes', 'activity');
 //    $this->view->groupedActionTypes = $groupedActionTypes = $actionTypesTable->getEnabledGroupedActionTypes();
@@ -63,7 +63,7 @@ class Activity_Widget_FeedController extends Engine_Content_Widget_Abstract
 //    if( $actionTypeGroup && isset($groupedActionTypes[$actionTypeGroup]) ) {
 //      $actionTypeFilters = $groupedActionTypes[$actionTypeGroup];
 //    }
-    
+
     // Get config options for activity
     $config = array(
       'action_id' => (int) $request->getParam('action_id'),
@@ -147,7 +147,7 @@ class Activity_Widget_FeedController extends Engine_Content_Widget_Abstract
             // if a module is disabled, getAttachments() will throw an Engine_Api_Exception; catch and continue
             continue;
           }
-          
+
           // add to list
           if( count($activity) < $length ) {
             $activity[] = $action;
@@ -157,7 +157,7 @@ class Activity_Widget_FeedController extends Engine_Content_Widget_Abstract
           }
         }
       }
-      
+
       // Set next tmp max_id
       if( $nextid ) {
         $tmpConfig['max_id'] = $nextid;
@@ -178,7 +178,7 @@ class Activity_Widget_FeedController extends Engine_Content_Widget_Abstract
     if( !empty($subject) ) {
       $this->view->subjectGuid = $subject->getGuid(false);
     }
-    
+
     $this->view->enableComposer = false;
     if( $viewer->getIdentity() && !$this->_getParam('action_id') ) {
       if( !$subject || ($subject instanceof Core_Model_Item_Abstract && $subject->isSelf($viewer)) ) {
@@ -206,7 +206,7 @@ class Activity_Widget_FeedController extends Engine_Content_Widget_Abstract
       }
     }
     $this->view->composePartials = $composePartials;
-    
+
     // Form token
     $session = new Zend_Session_Namespace('ActivityFormToken');
     //$session->setExpirationHops(10);

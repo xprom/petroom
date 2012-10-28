@@ -9,7 +9,7 @@ var $ = 'id' in document ? document.id : window.$;
 
 
 Composer = new Class({
-  
+
   Implements : [Events, Options],
 
   elements : {},
@@ -30,7 +30,8 @@ Composer = new Class({
     this.setOptions(options);
     this.elements = new Hash(this.elements);
     this.plugins = new Hash(this.plugins);
-    
+
+
     this.elements.textarea = $(element);
     this.elements.textarea.store('Composer');
 
@@ -110,26 +111,29 @@ Composer = new Class({
 
 
   // Editor
-  
+
   attach : function() {
     var size = this.elements.textarea.getSize();
 
     // Modify textarea
-    this.elements.textarea.addClass('compose-textarea').setStyle('display', 'none');
+    this.elements
+        .textarea
+        .addClass('compose-textarea')
+        .setStyle('display', 'none');
 
     // Create container
     this.elements.container = new Element('div', {
       'id' : 'compose-container',
       'class' : 'compose-container',
       'styles' : {
-        
+
       }
     });
     this.elements.container.wraps(this.elements.textarea);
-    
+
     // Create body
     var supportsContentEditable = this._supportsContentEditable();
-    
+
     if( supportsContentEditable ) {
       this.elements.body = new Element('div', {
         'class' : 'compose-content',
@@ -150,7 +154,7 @@ Composer = new Class({
     } else {
       this.elements.body = this.elements.textarea;
     }
-    
+
     // Attach blur event
     var self = this;
     this.elements.body.addEvent('blur', function(e) {
@@ -217,9 +221,9 @@ Composer = new Class({
         }
       }, this.options.overTextOptions));
     }
-    
+
     this.fireEvent('attach', this);
-    
+
     /*
     this.plugins.each(function(){
 
@@ -247,7 +251,7 @@ Composer = new Class({
 
 
   // Content
-  
+
   getContent: function(){
     if( this._supportsContentEditable() ) {
       return this.cleanup(this.elements.body.get('html'));
@@ -401,9 +405,9 @@ Composer = new Class({
   },
 
   keyListener: function(e){
-    
+
   },
-  
+
 
   _lang : function() {
     try {
@@ -430,7 +434,7 @@ Composer = new Class({
       alert(e);
     }
   },
-  
+
   _supportsContentEditable : function() {
     if( 'useContentEditable' in this.options && this.options.useContentEditable ) {
       return true;
@@ -596,7 +600,7 @@ Composer.OverText = new Class({
     }
     return !v;
   },
-  
+
   hide: function(suppressFocus, force){
     if (this.text && (this.text.isDisplayed() && (!this.element.get('disabled') || force))){
       this.text.hide();
@@ -628,7 +632,7 @@ Composer.Plugin.Interface = new Class({
   options : {
     loadingImage : en4.core.staticBaseUrl + 'application/modules/Core/externals/images/loading.gif'
   },
-  
+
   elements : {},
 
   persistentElements : ['activator', 'loadingImage'],
@@ -698,7 +702,7 @@ Composer.Plugin.Interface = new Class({
     this.getComposer().getMenu().getElements('.compose-activator').each(function(element) {
       element.setStyle('display', 'none');
     });
-   
+
     switch( $type(this.options.loadingImage) ) {
       case 'element':
         break;
@@ -792,7 +796,7 @@ Composer.Plugin.Interface = new Class({
       this.elements.menuTitle.appendText(')');
     }
   },
-  
+
   makeBody : function() {
     if( !this.elements.body ) {
       var tray = this.getComposer().getTray();
@@ -822,7 +826,7 @@ Composer.Plugin.Interface = new Class({
         'id' : 'compose-' + this.getName() + '-loading-image',
         'class' : 'compose-loading-image'
       }));
-      
+
       image.inject(this.elements.loading);
 
       new Element('span', {
@@ -835,7 +839,7 @@ Composer.Plugin.Interface = new Class({
     if( !$type(action) ) action = 'empty';
     message = message || 'An error has occurred';
     message = this._lang(message);
-    
+
     this.elements.error = new Element('div', {
       'id' : 'compose-' + this.getName() + '-error',
       'class' : 'compose-error',
@@ -845,7 +849,7 @@ Composer.Plugin.Interface = new Class({
 
   makeFormInputs : function(data) {
     this.ready();
-    
+
     this.getComposer().getInputArea().empty();
 
     data.type = this.getName();
@@ -892,7 +896,7 @@ Composer.Plugin.Interface = new Class({
       alert(e);
     }
   }
-  
+
 });
 
 

@@ -21,13 +21,14 @@ class User_Form_Signup_Photo extends Engine_Form
   public function init()
   {
     $settings = Engine_Api::_()->getApi('settings', 'core');
-  
+
     // Init form
     $this->setTitle('Add Your Photo');
 
     $this
       ->setAttrib('enctype', 'multipart/form-data')
-      ->setAttrib('id', 'SignupForm');
+      ->setAttrib('id', 'SignupForm')
+      ->setAttrib('class', 'global_form global_form_photo');
 
     $this->addElement('Image', 'current', array(
       'label' => 'Current Photo',
@@ -49,7 +50,7 @@ class User_Form_Signup_Photo extends Engine_Form
       ),
       'onchange'=>'javascript:uploadSignupPhoto();'
     ));
-  
+
     $this->addElement('Hash', 'token');
 
     $this->addElement('Hidden', 'coordinates', array(
@@ -64,7 +65,7 @@ class User_Form_Signup_Photo extends Engine_Form
     $this->addElement('Hidden', 'skip', array(
      'order' => 4
     ));
-    
+
     // Element: done
     if( $settings->getSetting('user.signup.photo', 0) == 0 ) {
     $this->addElement('Button', 'done', array(
@@ -77,10 +78,11 @@ class User_Form_Signup_Photo extends Engine_Form
     ));
     }
 
-    // Element: skip  
+    // Element: skip
     if( $settings->getSetting('user.signup.photo', 0) == 0 ) {
       $this->addElement('Cancel', 'skip-link', array(
         'label' => 'skip',
+        'class' => 'skip',
         'prependText' => ' or ',
         'link' => true,
         'href' => 'javascript:void(0);',

@@ -101,7 +101,7 @@ class User_Form_Signup_Invite extends Engine_Form
 
     ));
   }
-  
+
   public function validateEmails($value)
   {
     // Not string?

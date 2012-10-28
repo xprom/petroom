@@ -22,7 +22,8 @@ class User_Form_Edit_Photo extends Engine_Form
   {
     $this
       ->setAttrib('enctype', 'multipart/form-data')
-      ->setAttrib('name', 'EditPhoto');
+      ->setAttrib('name', 'EditPhoto')
+      ->setAttrib('class', 'global_form global_form_photo');
 
     $this->addElement('Image', 'current', array(
       'label' => 'Current Photo',
@@ -35,7 +36,7 @@ class User_Form_Edit_Photo extends Engine_Form
       )))
     ));
     Engine_Form::addDefaultDecorators($this->current);
-    
+
     $this->addElement('File', 'Filedata', array(
       'label' => 'Choose New Photo',
       'destination' => APPLICATION_PATH.'/public/temporary/',
@@ -70,13 +71,13 @@ class User_Form_Edit_Photo extends Engine_Form
           'action' => 'remove-photo',
       )),
       'onclick' => null,
-      'class' => 'smoothbox',
+      'class' => 'smoothbox skip',
       'decorators' => array(
         'ViewHelper'
       ),
     ));
 
     $this->addDisplayGroup(array('done', 'remove'), 'buttons');
-    
+
   }
 }

@@ -38,7 +38,10 @@ else
     $count = count($this->navigation);
     foreach( $this->navigation->getPages() as $item ) $item->setOrder(--$count);
   ?>
-  <ul>
+
+
+
+  <ul class="right-menu">
     <?php if( $this->viewer->getIdentity()) :?>
     <li id='core_menu_mini_menu_update'>
       <span onclick="toggleUpdatesPulldown(event, this, '4');" style="display: inline-block;" class="updates_pulldown">
@@ -64,6 +67,7 @@ else
         <a href="javascript:void(0);" id="updates_toggle" <?php if( $this->notificationCount ):?> class="new_updates"<?php endif;?>><?php echo $this->translate(array('%s Update', '%s Updates', $this->notificationCount), $this->locale()->toNumber($this->notificationCount)) ?></a>
       </span>
     </li>
+    <li>&nbsp;|&nbsp;</li>
     <?php endif; ?>
     <?php
         $i = 0;
@@ -82,14 +86,13 @@ else
       ))) ?></li>
 
     <?php endforeach; ?>
-    <?php if($this->search_check):?>
-      <li id="global_search_form_container">
+  </ul>
+
+  <?php if($this->search_check):?>
         <form id="global_search_form" action="<?php echo $this->url(array('controller' => 'search'), 'default', true) ?>" method="get">
           <input type='text' class='search text radius suggested' name='query' id='global_search_field' size='20' maxlength='100' value="Suchen.." />
         </form>
-      </li>
-    <?php endif;?>
-  </ul>
+  <?php endif;?>
 </div>
 
 

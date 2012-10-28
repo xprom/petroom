@@ -93,7 +93,7 @@ en4.core.shutdown = {
 window.addEvent('load', function(){
   en4.core.runonce.trigger();
 
-  $('global_page_core-index-index').getElements('input[name=email]').addEvent('focus',function(){
+  $$('#global_page_core-index-index input[name=email]').addEvent('focus',function(){
     if( this.value=='E-Mail-Adresse' )
         this.value = '';
 
@@ -142,14 +142,14 @@ window.addEvent('load', function(){
     $$('#login-holder input[name=email]').addClass('focus');
 
 
-  $('global_page_core-index-index').getElements('input[name=email]').addEvent('blur',function(){
+  $$('#global_page_core-index-index input[name=email]').addEvent('blur',function(){
     if(this.value=='')
     {
         this.value = 'E-Mail-Adresse';
         this.removeClass('focus');
     }
   });
-  $('global_page_core-index-index').getElements('input[name=nickname]').addEvent('blur',function(){
+  $$('#global_page_core-index-index input[name=nickname]').addEvent('blur',function(){
     if(this.value=='')
     {
         this.value = 'Tiername';
@@ -242,9 +242,10 @@ window.addEvent('load', function(){
         eq = 0;
 
     $$('.navigator a')[eq].click();
+    clearTimeout(window['slider_time']);
+    window['slider_time'] = window.setTimeout('next_slider();',window['next_slider_speed']);
     return false;
   }
-  window['slider_time'] = window.setTimeout('next_slider();',window['next_slider_speed']);
 
   $$('.navigator a').addEvent('click',function(event){
         if( this.hasClass('active'))
@@ -294,6 +295,9 @@ window.addEvent('load', function(){
 
         return false;
   })
+
+  if($$('.navigator a').length!=0)
+    window['slider_time'] = window.setTimeout('next_slider();',window['next_slider_speed']);
 
 });
 

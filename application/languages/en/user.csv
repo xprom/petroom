@@ -245,7 +245,7 @@ select ""Read & Write"" in order to allow posting to Twitter. Please use the
 following Callback URL: %2$s"
 
 "USER_ADMIN_SETTINGS_JANRAIN_DESCRIPTION";"You can now integrate social sign-in
-and sharing with sites such as Facebook, Twitter, Google, and LinkedIn using 
+and sharing with sites such as Facebook, Twitter, Google, and LinkedIn using
 <a href=""%1$s"" target=""_blank"">Janrain</a>. You can import members from
 the Facebook and Twitter integration <a href=""%2$s"">here</a>.
 <a class=""admin help"" href=""%3$s"" target=""_blank""> </a>"

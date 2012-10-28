@@ -19,13 +19,13 @@
 class User_Form_Login extends Engine_Form
 {
   protected $_mode;
-  
+
   public function setMode($mode)
   {
     $this->_mode = $mode;
     return $this;
   }
-  
+
   public function getMode()
   {
     if( null === $this->_mode ) {
@@ -33,11 +33,11 @@ class User_Form_Login extends Engine_Form
     }
     return $this->_mode;
   }
-  
+
   public function init()
   {
     $tabindex = 1;
-    
+
     $description = Zend_Registry::get('Zend_Translate')->_("If you already have an account, please enter your details below. If you don't have one yet, please <a href='%s'>sign up</a> first.");
     $description= sprintf($description, Zend_Controller_Front::getInstance()->getRouter()->assemble(array(), 'user_signup', true));
 
@@ -60,12 +60,12 @@ class User_Form_Login extends Engine_Form
       'validators' => array(
         'EmailAddress'
       ),
-      
+
       // Fancy stuff
       'tabindex' => $tabindex++,
       'autofocus' => 'autofocus',
-      'inputType' => 'email',
-      'class' => 'text',
+      'inputType' => 'text',
+      'class' => 'text radius',
     ));
 
     $password = Zend_Registry::get('Zend_Translate')->_('Password');
@@ -78,10 +78,11 @@ class User_Form_Login extends Engine_Form
       'filters' => array(
         'StringTrim',
       ),
+      'class' => 'text radius',
     ));
 
     $this->addElement('Hidden', 'return_url', array(
-      
+
     ));
 
     $settings = Engine_Api::_()->getApi('settings', 'core');
@@ -98,7 +99,7 @@ class User_Form_Login extends Engine_Form
       'ignore' => true,
       'tabindex' => $tabindex++,
     ));
-    
+
     // Init remember me
     $this->addElement('Checkbox', 'remember', array(
       'label' => 'Remember Me',
@@ -134,7 +135,7 @@ class User_Form_Login extends Engine_Form
         'content' => User_Model_DbTable_Twitter::loginButton(),
       ));
     }
-    
+
     // Init janrain login link
     if( 'none' != $settings->getSetting('core_janrain_enable', 'none')
         && $settings->core_janrain_key ) {

@@ -20,7 +20,7 @@ class Activity_Model_Helper_Item extends Activity_Model_Helper_Abstract
 {
   /**
    * Generates text representing an item
-   * 
+   *
    * @param mixed $item The item or item guid
    * @param string $text (OPTIONAL)
    * @param string $href (OPTIONAL)
@@ -54,12 +54,12 @@ class Activity_Model_Helper_Item extends Activity_Model_Helper_Abstract
     {
       $href = $item->getHref();
     }
-    
-    return '<a '
+
+    return '<div><a '
       . 'class="feed_item_username" '
       . ( $href ? 'href="'.$href.'"' : '' )
       . '>'
       . $text
-      . '</a>';
+      . '</a></div>';
   }
 }

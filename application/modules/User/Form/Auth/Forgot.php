@@ -35,6 +35,7 @@ class User_Form_Auth_Forgot extends Engine_Form
         'EmailAddress'
       ),
       'tabindex' => 1,
+      'class' => 'text radius',
     ));
 
     // Init submit
@@ -57,7 +58,7 @@ class User_Form_Auth_Forgot extends Engine_Form
         'ViewHelper',
       ),
     ));
-    
+
     $this->addDisplayGroup(array(
       'submit',
       'cancel'

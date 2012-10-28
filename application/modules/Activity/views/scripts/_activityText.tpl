@@ -69,7 +69,7 @@
 <?php if( !$this->getUpdate ): ?>
 <ul class='feed' id="activity-feed">
 <?php endif ?>
-  
+
 <?php
   foreach( $actions as $action ): // (goes to the end of the file)
     try { // prevents a bad feed item from destroying the entire page
@@ -77,7 +77,7 @@
       if( !$action->getTypeInfo()->enabled ) continue;
       if( !$action->getSubject() || !$action->getSubject()->getIdentity() ) continue;
       if( !$action->getObject() || !$action->getObject()->getIdentity() ) continue;
-      
+
       ob_start();
     ?>
   <?php if( !$this->noList ): ?><li id="activity-item-<?php echo $action->action_id ?>"><?php endif; ?>
@@ -99,7 +99,7 @@
 
 
     <div class='feed_item_body'>
-      
+
       <?php // Main Content ?>
       <span class="<?php echo ( empty($action->getTypeInfo()->is_generated) ? 'feed_item_posted' : 'feed_item_generated' ) ?>">
         <?php echo $action->getContent()?>
@@ -118,7 +118,7 @@
                 <?php if( $attachment->meta->mode == 0 ): // Silence ?>
                 <?php elseif( $attachment->meta->mode == 1 ): // Thumb/text/title type actions ?>
                   <div>
-                    <?php 
+                    <?php
                       if ($attachment->item->getType() == "core_link")
                       {
                         $attribs = Array('target'=>'_blank');
@@ -126,7 +126,7 @@
                       else
                       {
                         $attribs = Array();
-                      } 
+                      }
                     ?>
                     <?php if( $attachment->item->getPhotoUrl() ): ?>
                       <?php echo $this->htmlLink($attachment->item->getHref(), $this->itemPhoto($attachment->item, 'thumb.normal', $attachment->item->getTitle()), $attribs) ?>
@@ -169,36 +169,33 @@
             Engine_Api::_()->authorization()->isAllowed($action->getObject(), null, 'comment') &&
             !empty($this->commentForm) );
       ?>
-      <div class='feed_item_date feed_item_icon <?php echo $icon_type ?>'>
-        <ul>
-          <li>
-            <?php echo $this->timestamp($action->getTimeValue()) ?>
-          </li>
-          <?php if( $canComment ): ?>
+
+      <div class="post-date post-left">
+        <?php if( $canComment ): ?>
             <?php if( $action->likes()->isLike($this->viewer()) ): ?>
-              <li class="feed_item_option_unlike">
-                <span>-</span>
-                <?php echo $this->htmlLink('javascript:void(0);', $this->translate('Unlike'), array('onclick'=>'javascript:en4.activity.unlike('.$action->action_id.');')) ?>
-              </li>
+              <div class="feed_item_option_unlike" onclick="javascript:en4.activity.unlike(<?=$action->action_id;?>);"><span>mir gefällt</span><span class="counter">12</span></div>
             <?php else: ?>
-              <li class="feed_item_option_like">
-                <span>-</span>
-                <?php echo $this->htmlLink('javascript:void(0);', $this->translate('Like'), array('onclick'=>'javascript:en4.activity.like('.$action->action_id.');')) ?>
-              </li>
+                <div class="feed_item_option_like" onclick="javascript:en4.activity.like(<?=$action->action_id;?>);"><span>mir gefällt</span><span class="counter">12</span></div>
             <?php endif; ?>
+        <?php endif; ?>
+
+        <?php echo $this->timestamp($action->getTimeValue()) ?> |
+        <?php if( $canComment ): ?>
             <?php if( Engine_Api::_()->getApi('settings', 'core')->core_spam_comment ): // Comments - likes ?>
-              <li class="feed_item_option_comment">
-                <span>-</span>
                 <?php echo $this->htmlLink(array('route'=>'default','module'=>'activity','controller'=>'index','action'=>'viewcomment','action_id'=>$action->getIdentity(),'format'=>'smoothbox'), $this->translate('Comment'), array(
                   'class'=>'smoothbox',
                 )) ?>
-              </li>
             <?php else: ?>
-              <li class="feed_item_option_comment">
-                <span>-</span>
                 <?php echo $this->htmlLink('javascript:void(0);', $this->translate('Comment'), array('onclick'=>'document.getElementById("'.$this->commentForm->getAttrib('id').'").style.display = ""; document.getElementById("'.$this->commentForm->submit->getAttrib('id').'").style.display = "block"; document.getElementById("'.$this->commentForm->body->getAttrib('id').'").focus();')) ?>
-              </li>
             <?php endif; ?>
+        <?php endif; ?>
+      </div>
+
+      <div class='feed_item_date feed_item_icon <?php echo $icon_type ?>'>
+        <ul>
+          <?php if( $canComment ): ?>
+
+
             <?php if( $this->viewAllComments ): ?>
               <script type="text/javascript">
                 en4.core.runonce.add(function() {

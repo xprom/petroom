@@ -31,7 +31,7 @@ class Fields_Form_Standard extends Engine_Form
 
   protected $_isCreation = false;
 
-  
+
   // Add custom element paths?
   public function __construct($options = null)
   {
@@ -46,7 +46,7 @@ class Fields_Form_Standard extends Engine_Form
     $form
       ->addPrefixPath('Fields_Form_Element', APPLICATION_PATH . '/application/modules/Fields/Form/Element', 'element');
   }
-  
+
 
   /* General */
 
@@ -123,6 +123,7 @@ class Fields_Form_Standard extends Engine_Form
   public function generate()
   {
     $struct = $this->getFieldStructure();
+    $this->addAttribs(array('id'=>'user_form_login'));
 
     $orderIndex = 0;
 
@@ -134,13 +135,13 @@ class Fields_Form_Standard extends Engine_Form
       if( isset($field->show) && !$field->show && $this->_isCreation ) {
         continue;
       }
-      
+
       // Add field and load options if necessary
       $params = $field->getElementParams($this->getItem());
 
       //$key = 'field_' . $field->field_id;
       $key = $map->getKey();
-      
+
       // If value set in processed values, set in element
       if( !empty($this->_processedValues[$field->field_id]) )
       {
@@ -150,7 +151,7 @@ class Fields_Form_Standard extends Engine_Form
       if( !@is_array($params['options']['attribs']) ) {
         $params['options']['attribs'] = array();
       }
-      
+
       // Heading
       if( $params['type'] == 'Heading' )
       {
@@ -161,10 +162,11 @@ class Fields_Form_Standard extends Engine_Form
       // Order
       // @todo this might cause problems, however it will prevent multiple orders causing elements to not show up
       $params['options']['order'] = $orderIndex++;
-      
+
       $inflectedType = Engine_Api::_()->fields()->inflectFieldType($params['type']);
       unset($params['options']['alias']);
       unset($params['options']['publish']);
+
       $this->addElement($inflectedType, $key, $params['options']);
 
       $element = $this->getElement($key);
@@ -172,9 +174,17 @@ class Fields_Form_Standard extends Engine_Form
       if( method_exists($element, 'setFieldMeta') ) {
         $element->setFieldMeta($field);
       }
-      
+
       // Set attributes for hiding/showing fields using javscript
       $classes = 'field_container field_'.$map->child_id.' option_'.$map->option_id.' parent_'.$map->field_id;
+
+      if($map->child_id==5 || $map->child_id==6)
+        $classes .= ' select-text';
+      elseif($map->child_id!=7 && $map->child_id!=1 && $map->child_id!=2 && $map->child_id!=12)
+        $classes .= ' text radius';
+      else
+        $classes .= ' blue-title';
+
       $element->setAttrib('class', $classes);
 
       //
@@ -234,7 +244,7 @@ class Fields_Form_Standard extends Engine_Form
 
       // Array mode
       if( is_array($value) || $this->getElement($key)->isArray() ) {
-        
+
         // Lookup
         $valueRows = $values->getRowsMatching(array(
           'field_id' => $field_id,
@@ -245,7 +255,7 @@ class Fields_Form_Standard extends Engine_Form
         foreach( $valueRows as $valueRow ) {
           $valueRow->delete();
         }
-        
+
         // Insert all
         $indexIndex = 0;
         if( is_array($value) || !empty($value) ) {
@@ -269,7 +279,7 @@ class Fields_Form_Standard extends Engine_Form
           'item_id' => $this->getItem()->getIdentity(),
           'index' => 0
         ));
-        
+
         // Remove value row if empty
         if( empty($value) ) {
           if( $valueRow ) {
@@ -286,7 +296,7 @@ class Fields_Form_Standard extends Engine_Form
           $valueRow->field_id = $field_id;
           $valueRow->item_id = $this->getItem()->getIdentity();
         }
-        
+
         $valueRow->value = htmlspecialchars($value);
         $valueRow->save();
 
@@ -306,14 +316,14 @@ class Fields_Form_Standard extends Engine_Form
             ));
           }
         }
-         * 
+         *
          */
       }
     }
-    
+
     // Update search table
     Engine_Api::_()->getApi('core', 'fields')->updateSearch($this->getItem(), $values);
-    
+
     // Fire on save hook
     Engine_Hooks_Dispatcher::getInstance()->callEvent('onFieldsValuesSave', array(
       'item' => $this->getItem(),
@@ -339,7 +349,7 @@ class Fields_Form_Standard extends Engine_Form
 
 
   /* These are hacks to existing form methods */
-  
+
   public function init()
   {
     $this->generate();
@@ -370,18 +380,18 @@ class Fields_Form_Standard extends Engine_Form
       if( count($parts) !== 3 ) {
         continue;
       }
-      
+
       list($parent_id, $option_id, $field_id) = $parts;
       //if( !is_numeric($field_id) ) continue;
 
       $fieldObject = $structure[$key];
-      
+
       // All top level fields are always shown
       if( !empty($parent_id) ) {
-        
+
         $parent_field_id = $parent_id;
         $option_id = $option_id;
-        
+
         // Field has already been stored, or parent does not have option
         // specified, <del>or field is a heading</del>
         if( isset($selected[$field_id]) || empty($selected[$parent_field_id]) /* || !isset($data[$key])*/ ) {

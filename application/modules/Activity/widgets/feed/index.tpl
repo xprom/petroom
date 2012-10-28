@@ -15,7 +15,7 @@
     (empty($this->getUpdate) && empty($this->checkUpdate)) ): ?>
   <script type="text/javascript">
     en4.core.runonce.add(function() {
-      
+
       var activity_count = <?php echo sprintf('%d', $this->activityCount) ?>;
       var next_id = <?php echo sprintf('%d', $this->nextid) ?>;
       var subject_guid = '<?php echo $this->subjectGuid ?>';
@@ -46,7 +46,7 @@
         });
        request.send();
       }
-      
+
       if( next_id > 0 && !endOfFeed ) {
         $('feed_viewmore').style.display = '';
         $('feed_loading').style.display = 'none';
@@ -58,7 +58,7 @@
         $('feed_viewmore').style.display = 'none';
         $('feed_loading').style.display = 'none';
       }
-      
+
     });
   </script>
 <?php endif; ?>
@@ -101,10 +101,10 @@ endif; ?>
 <?php endif; ?>
 
 <?php if( $this->enableComposer ): ?>
-  <div class="activity-post-container">
+  <div class="activity-post-container border-bottom insert-news">
 
     <form method="post" action="<?php echo $this->url(array('module' => 'activity', 'controller' => 'index', 'action' => 'post'), 'default', true) ?>" class="activity" enctype="application/x-www-form-urlencoded" id="activity-form">
-      <textarea id="activity_body" cols="1" rows="1" name="body"></textarea>
+      <textarea id="activity_body" class="radius" cols="1" rows="1" name="body">Teile hier etwas</textarea>
       <input type="hidden" name="return_url" value="<?php echo $this->url() ?>" />
       <?php if( $this->viewer() && $this->subject() && !$this->viewer()->isSelf($this->subject())): ?>
         <input type="hidden" name="subject" value="<?php echo $this->subject()->getGuid() ?>" />
@@ -112,10 +112,11 @@ endif; ?>
       <?php if( $this->formToken ): ?>
         <input type="hidden" name="token" value="<?php echo $this->formToken ?>" />
       <?php endif ?>
-      <div id="compose-menu" class="compose-menu">
+      <div id="compose-menu" class="compose-menu hidden">
         <button id="compose-submit" type="submit"><?php echo $this->translate("Share") ?></button>
       </div>
     </form>
+
 
     <?php
       $this->headScript()
@@ -123,21 +124,7 @@ endif; ?>
         ->appendFile($this->layout()->staticBaseUrl . 'application/modules/Core/externals/scripts/composer.js');
     ?>
 
-    <script type="text/javascript">
-      var composeInstance;
-      en4.core.runonce.add(function() {
-        // @todo integrate this into the composer
-        if( !DetectMobileQuick() && !DetectIpad() ) {
-          composeInstance = new Composer('activity_body', {
-            menuElement : 'compose-menu',
-            baseHref : '<?php echo $this->baseUrl() ?>',
-            lang : {
-              'Post Something...' : '<?php echo $this->string()->escapeJavascript($this->translate('Post Something...')) ?>'
-            }
-          });
-        }
-      });
-    </script>
+
 
     <?php foreach( $this->composePartials as $partial ): ?>
       <?php echo $this->partial($partial[0], $partial[1]) ?>

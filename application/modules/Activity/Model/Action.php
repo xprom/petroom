@@ -20,13 +20,13 @@
 class Activity_Model_Action extends Core_Model_Item_Abstract
 {
   protected $_searchTriggers = false;
-  
+
   const ATTACH_IGNORE = 0;
   const ATTACH_NORMAL = 1;
   const ATTACH_MULTI = 2;
   const ATTACH_DESCRIPTION = 3;
   const ATTACH_COLLECTION = 4;
-  
+
   /**
    * The action subject
    *
@@ -36,36 +36,36 @@ class Activity_Model_Action extends Core_Model_Item_Abstract
 
   /**
    * The action object
-   * 
+   *
    * @var Core_Model_Item_Abstract
    */
   protected $_object;
 
   /**
    * The action attachments
-   * 
+   *
    * @var mixed
    */
   protected $_attachments;
 
   /**
    * The action likes
-   * 
+   *
    * @var mixed
    */
   protected $_likes;
 
   /**
    * The action comments
-   * 
+   *
    * @var mixed
    */
   protected $_comments;
 
 
-  
+
   // General
-  
+
   public function getHref($params = array())
   {
     $displayable = $this->getTypeInfo()->displayable;
@@ -115,7 +115,7 @@ class Activity_Model_Action extends Core_Model_Item_Abstract
 
   /**
    * Assembles action string
-   * 
+   *
    * @return string
    */
   public function getContent()
@@ -145,7 +145,7 @@ class Activity_Model_Action extends Core_Model_Item_Abstract
 
   /**
    * Get the action subject
-   * 
+   *
    * @return Core_Model_Item_Abstract
    */
   public function getSubject()
@@ -160,7 +160,7 @@ class Activity_Model_Action extends Core_Model_Item_Abstract
 
   /**
    * Get the action object
-   * 
+   *
    * @return Core_Model_Item_Abstract
    */
   public function getObject()
@@ -197,7 +197,7 @@ class Activity_Model_Action extends Core_Model_Item_Abstract
 
   /**
    * Get the timestamp
-   * 
+   *
    * @return integer
    */
   public function getTimeValue()
@@ -261,7 +261,7 @@ class Activity_Model_Action extends Core_Model_Item_Abstract
 
     return $this->_attachments;
   }
-  
+
   public function getLikes()
   {
     if( null !== $this->_likes )
@@ -281,14 +281,14 @@ class Activity_Model_Action extends Core_Model_Item_Abstract
     $comments = $this->comments();
     $table = $comments->getReceiver();
     $comment_count = $comments->getCommentCount();
-    
+
     if( $comment_count <= 0 ) {
       return;
     }
 
     // Always just get the last three comments
     $select = $comments->getCommentSelect();
-    
+
     if( $comment_count <= 5 ) {
       $select->limit(5);
     } else if( !$commentViewAll ) {
@@ -383,7 +383,7 @@ class Activity_Model_Action extends Core_Model_Item_Abstract
     // lastly, delete item
     $this->delete();
   }
-  
+
   protected function _delete()
   {
     // Delete stream stuff

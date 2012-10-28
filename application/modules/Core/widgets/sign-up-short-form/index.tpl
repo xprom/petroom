@@ -28,5 +28,9 @@
         </label>
 
         <input type="submit" class="submit" value="Anmelden" />
+        <p align="center">
+            Erstelle <a href="/signup">hier</a> eine Seite für Unternehmen, Shop,<br />
+            Verein oder Organisation
+        </p>
     </form>
 </div>

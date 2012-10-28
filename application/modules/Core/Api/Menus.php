@@ -119,7 +119,7 @@ class Core_Api_Menus extends Core_Api_Abstract
       if( !empty($options) ) {
         $page = array_merge_recursive($page, $options);
       }
-      
+
       // Standardize arguments
       if( !isset($page['reset_params']) ) {
         $page['reset_params'] = true;
@@ -132,19 +132,19 @@ class Core_Api_Menus extends Core_Api_Abstract
 
       $page['class'] = ( !empty($page['class']) ? $page['class'] . ' ' : '' ) . 'menu_' . $name;
       $page['class'] .= " " . $row->name;
-      
+
       // Get submenu
       if( $row->submenu )
       {
         $page['pages'] = $this->getMenuParams($row->submenu);
       }
-      
-      // Maintain menu item order 
+
+      // Maintain menu item order
       $page['order'] = $row->order;
-      
+
       $pages[] = $page;
     }
-    
+
     return $pages;
   }
 

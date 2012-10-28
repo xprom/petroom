@@ -37,7 +37,7 @@ class User_Plugin_Menus
   }
 
 
-  
+
   // core_main
 
   public function onMenuInitialize_CoreMainHome($row)
@@ -53,8 +53,8 @@ class User_Plugin_Menus
       $route['params'] = array(
         'action' => 'home',
       );
-      if( 'user'  == $request->getModuleName() && 
-          'index' == $request->getControllerName() && 
+      if( 'user'  == $request->getModuleName() &&
+          'index' == $request->getControllerName() &&
           'home'  == $request->getActionName() ) {
         $route['active'] = true;
       }
@@ -89,7 +89,7 @@ class User_Plugin_Menus
         'uri' => $viewer->getHref(),
       );
     }
-    
+
     return false;
   }
 
@@ -106,7 +106,7 @@ class User_Plugin_Menus
         )
       );
     }
-    
+
     return false;
   }
 
@@ -115,7 +115,7 @@ class User_Plugin_Menus
     $viewer = Engine_Api::_()->user()->getViewer();
     if( $viewer->getIdentity() ) {
       return array(
-        'label' => 'Sign Out',
+        'label' => 'Logout',
         'route' => 'user_logout',
         'class' => 'no-dloader',
       );
@@ -143,11 +143,11 @@ class User_Plugin_Menus
 
     return false;
   }
-  
-  
-  
+
+
+
   // user_edit
-  
+
   public function onMenuInitialize_UserEditStyle($row)
   {
     if( Engine_Api::_()->core()->hasSubject('user') ) {
@@ -189,7 +189,6 @@ class User_Plugin_Menus
     // @todo move to authorization
     return array(
       'label' => 'Edit My Profile',
-      'icon' => 'application/modules/User/externals/images/edit.png',
       'route' => 'user_extended',
       'params' => array(
         'controller' => 'edit',
@@ -215,7 +214,6 @@ class User_Plugin_Menus
     if( $subject->authorization()->isAllowed($viewer, 'edit') ) {
       return array(
         'label' => $label,
-        'icon' => 'application/modules/User/externals/images/edit.png',
         'route' => 'user_extended',
         'params' => array(
           'controller' => 'edit',
@@ -227,7 +225,7 @@ class User_Plugin_Menus
 
     return false;
   }
-  
+
   public function onMenuInitialize_UserProfileFriend($row)
   {
     $viewer = Engine_Api::_()->user()->getViewer();
@@ -237,7 +235,7 @@ class User_Plugin_Menus
     if( !$viewer->getIdentity() || $viewer->getGuid(false) === $subject->getGuid(false) ) {
       return false;
     }
-    
+
     // No blocked
     if( $viewer->isBlockedBy($subject) ) {
       return false;
@@ -251,7 +249,7 @@ class User_Plugin_Menus
 
     // check admin level setting if you can befriend people in your network
     else if( $eligible == 1 ){
-      
+
       $networkMembershipTable = Engine_Api::_()->getDbtable('membership', 'network');
       $networkMembershipName = $networkMembershipTable->info('name');
 
@@ -276,13 +274,12 @@ class User_Plugin_Menus
       $viewerRow = $viewer->membership()->getRow($subject);
       $subjectRow = $subject->membership()->getRow($viewer);
       $params = array();
-      
+
       // Viewer?
       if( null === $subjectRow ) {
         // Follow
         $params[] = array(
           'label' => 'Follow',
-          'icon' => 'application/modules/User/externals/images/friends/add.png',
           'class' => 'smoothbox',
           'route' => 'user_extended',
           'params' => array(
@@ -295,7 +292,6 @@ class User_Plugin_Menus
         // Cancel follow request
         $params[] = array(
           'label' => 'Cancel Follow Request',
-          'icon' => 'application/modules/User/externals/images/friends/remove.png',
           'class' => 'smoothbox',
           'route' => 'user_extended',
           'params' => array(
@@ -308,7 +304,6 @@ class User_Plugin_Menus
         // Unfollow
         $params[] = array(
           'label' => 'Unfollow',
-          'icon' => 'application/modules/User/externals/images/friends/remove.png',
           'class' => 'smoothbox',
           'route' => 'user_extended',
           'params' => array(
@@ -325,7 +320,6 @@ class User_Plugin_Menus
         // Approve follow request
         $params[] = array(
           'label' => 'Approve Follow Request',
-          'icon' => 'application/modules/User/externals/images/friends/add.png',
           'class' => 'smoothbox',
           'route' => 'user_extended',
           'params' => array(
@@ -338,7 +332,6 @@ class User_Plugin_Menus
         // Remove as follower?
         $params[] = array(
           'label' => 'Remove as Follower',
-          'icon' => 'application/modules/User/externals/images/friends/remove.png',
           'class' => 'smoothbox',
           'route' => 'user_extended',
           'params' => array(
@@ -365,7 +358,6 @@ class User_Plugin_Menus
         // Add
         return array(
           'label' => 'Add to My Friends',
-          'icon' => 'application/modules/User/externals/images/friends/add.png',
           'class' => 'smoothbox',
           'route' => 'user_extended',
           'params' => array(
@@ -378,7 +370,6 @@ class User_Plugin_Menus
         // Cancel request
         return array(
           'label' => 'Cancel Friend Request',
-          'icon' => 'application/modules/User/externals/images/friends/remove.png',
           'class' => 'smoothbox',
           'route' => 'user_extended',
           'params' => array(
@@ -391,7 +382,6 @@ class User_Plugin_Menus
         // Approve request
         return array(
           'label' => 'Approve Friend Request',
-          'icon' => 'application/modules/User/externals/images/friends/add.png',
           'class' => 'smoothbox',
           'route' => 'user_extended',
           'params' => array(
@@ -404,7 +394,6 @@ class User_Plugin_Menus
         // Remove friend
         return array(
           'label' => 'Remove from Friends',
-          'icon' => 'application/modules/User/externals/images/friends/remove.png',
           'class' => 'smoothbox',
           'route' => 'user_extended',
           'params' => array(
@@ -430,11 +419,10 @@ class User_Plugin_Menus
     if( !Engine_Api::_()->authorization()->isAllowed('user', $viewer, 'block') ) {
       return false;
     }
-    
+
     if( !$subject->isBlockedBy($viewer) ) {
       return array(
         'label' => 'Block Member',
-        'icon' => 'application/modules/User/externals/images/block.png',
         'class' => 'smoothbox',
         'route' => 'user_extended',
         'params' => array(
@@ -446,7 +434,6 @@ class User_Plugin_Menus
     } else {
       return array(
         'label' => 'Unblock Member',
-        'icon' => 'application/modules/User/externals/images/block.png',
         'class' => 'smoothbox',
         'route' => 'user_extended',
         'params' => array(
@@ -463,14 +450,13 @@ class User_Plugin_Menus
     $viewer = Engine_Api::_()->user()->getViewer();
     $subject = Engine_Api::_()->core()->getSubject();
 
-    if( !$viewer->getIdentity() || 
-        !$subject->getIdentity() || 
+    if( !$viewer->getIdentity() ||
+        !$subject->getIdentity() ||
         $viewer->isSelf($subject) ) {
       return false;
     } else {
       return array(
         'label' => 'Report',
-        'icon' => 'application/modules/Core/externals/images/report.png',
         'class' => 'smoothbox',
         'route' => 'default',
         'params' => array(
@@ -494,7 +480,6 @@ class User_Plugin_Menus
     } else {
       return array(
         'label' => 'Admin Settings',
-        'icon' => 'application/modules/User/externals/images/edit.png',
         'class' => 'smoothbox',
         'route' => 'admin_default',
         'params' => array(

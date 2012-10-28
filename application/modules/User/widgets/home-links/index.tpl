@@ -11,7 +11,7 @@
  */
 ?>
 
-<div class="quicklinks">
+<div class="quicklinks border-bottom">
   <?php // This is rendered by application/modules/core/views/scripts/_navIcons.tpl
     echo $this->navigation()
       ->menu()
@@ -19,4 +19,14 @@
       ->setPartial(array('_navIcons.tpl', 'core'))
       ->render()
   ?>
+</div>
+
+<div class="border-bottom ads">
+    <a><b>Innovative Weiterbildung</b></a><br>
+    <b><span>hslu.ch/weiterbildung</span></b>
+    <img src="/application/themes/clean/images/left-ads.png">
+    Machen Sie mehr aus sich.
+    Mit einer Weiterbildung an
+    der Hochschule Luzern. Jetzt
+    Info-Unterlagen bestellen!
 </div>

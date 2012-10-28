@@ -11,23 +11,27 @@
  */
 ?>
 
+<div class="border-bottom">
+    <table class="counter-table" width="100%">
+        <tr>
+            <td width="33%">
+                <span><?php echo $this->locale()->toNumber($this->member_count); ?></span><br>
+                <?php echo $this->translate(array('member', 'members', $this->member_count)) ?>
+            </td>
+            <td width="33%" class="middle">
+                <span><?php echo $this->locale()->toNumber($this->friend_count) ?></span><br>
+                <?php echo $this->translate(array('friendship', 'friendships', $this->friend_count)) ?>
+            </td>
+            <td width="34%">
+                <span><?php echo $this->locale()->toNumber($this->post_count) ?></span>
+                <?php echo $this->translate(array('post', 'posts', $this->post_count)) ?>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+<? /*
 <ul>
-  <li>
-    <span><?php echo $this->locale()->toNumber($this->member_count); ?></span>
-    <div><?php echo $this->translate(array('member', 'members', $this->member_count)) ?></div>
-  </li>
-  <?php if ($this->friend_count > 0): ?>
-    <li>
-      <span><?php echo $this->locale()->toNumber($this->friend_count) ?></span>
-      <div><?php echo $this->translate(array('friendship', 'friendships', $this->friend_count)) ?></div>
-    </li>
-  <?php endif; ?>
-  <?php if ($this->post_count > 0): ?>
-    <li>
-      <span><?php echo $this->locale()->toNumber($this->post_count) ?></span>
-      <div><?php echo $this->translate(array('post', 'posts', $this->post_count)) ?></div>
-    </li>
-  <?php endif; ?>
   <?php if ($this->comment_count > 0): ?>
     <li>
       <span><?php echo $this->locale()->toNumber($this->comment_count) ?></span>
@@ -45,4 +49,5 @@
     <?php endif; ?>
   <?php endforeach; endif; ?>
 
-</ul>
+</ul>*/
+?>

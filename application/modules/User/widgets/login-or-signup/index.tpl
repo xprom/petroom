@@ -36,7 +36,7 @@
   <?php endif; ?>
 
 <?php else: ?>
-    
+
   <h3 style="margin-bottom: 0px;">
     <?php echo $this->htmlLink(array('route' => 'user_login'), $this->translate('Sign In')) ?>
     <?php echo $this->translate('or') ?>
@@ -44,5 +44,5 @@
   </h3>
 
   <?php echo $this->form->setAttrib('class', 'global_form_box no_form')->render($this) ?>
-    
+
 <?php endif; ?>

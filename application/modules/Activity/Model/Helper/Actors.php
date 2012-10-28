@@ -24,7 +24,7 @@ class Activity_Model_Helper_Actors extends Activity_Model_Helper_Abstract
 
     $subject = $this->_getItem($subject, false);
     $object = $this->_getItem($object, false);
-    
+
     // Check to make sure we have an item
     if( !($subject instanceof Core_Model_Item_Abstract) || !($object instanceof Core_Model_Item_Abstract) )
     {
