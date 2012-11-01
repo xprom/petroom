@@ -22396,3 +22396,1396 @@ Stack trace:
 #9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
 #10 {main}
 
+2012-10-28T15:03:06+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: 0a67cb
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T15:03:10+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: d1edd9
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T15:03:27+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 438279
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T15:14:56+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: c964ab
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T15:14:59+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: e11a20
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T15:15:11+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 918e47
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T15:35:35+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: 157b71
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T15:35:39+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 3600de
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T15:35:58+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 44831f
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T15:36:24+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 686925
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T15:36:37+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 060fb4
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T15:37:18+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: a78454
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T15:37:32+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 650f50
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T16:06:48+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: cae114
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T16:06:52+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: f75ea2
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T16:07:06+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: e388f8
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T17:25:24+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: 4f8c17
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T17:25:28+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 01f2c4
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T17:25:44+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 61e3a3
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:23:21+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: c598b8
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T18:23:23+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: d845ed
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:23:36+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 858254
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:24:58+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 438b25
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:25:12+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 00cab8
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:28:21+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 9b5b1f
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:28:38+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: 0b10d9
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T18:28:42+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: f5e488
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:29:30+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: f08589
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:29:51+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: ea5dd7
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:32:50+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 6318ba
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:33:04+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 238ed3
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:38:09+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: 20c796
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T18:38:12+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 705062
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:38:42+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: cde8ec
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:43:32+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: 2a12a9
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T18:43:34+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 349e9c
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:43:48+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 426b1b
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:54:44+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: cd1d26
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T18:54:46+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 4b7b51
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:55:03+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 371317
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:57:25+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 445f2b
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:57:45+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 75c44a
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:59:26+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 73e6f5
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T18:59:45+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: b892e9
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T19:01:36+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: f9241e
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-28T19:01:40+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 4dd63d
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-28T19:02:03+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 2b6106
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:40:08+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 3ac6e8
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:41:39+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: f8fdd1
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-29T18:41:45+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: b4a6ad
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:41:56+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 9915ed
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:45:46+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 87c878
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:45:58+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 184d35
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:46:04+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 1a42c4
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:46:15+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 6aefa3
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:46:36+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 8fb0cf
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:46:43+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 7cb784
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:46:50+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 11147c
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:47:21+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: d1317c
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:47:31+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: f7d5cf
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-29T18:47:33+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: f74479
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:47:46+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 9b0e5b
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:52:11+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 3fa8ee
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:52:29+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 626987
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:53:02+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: 60350f
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-29T18:53:05+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: b9fe5d
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:53:19+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: fb0b9d
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:53:40+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 0d7615
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:53:53+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 36a21b
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:56:06+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 495fac
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:56:19+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: e98079
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:56:33+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 4357ca
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T18:56:45+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 419aae
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T19:00:41+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: fc27da
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-29T19:00:43+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 77916c
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T19:00:57+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: e1ca4b
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T19:09:50+00:00 NOTICE (5): [8] Undefined index: icon (N:\home\localhost\www\application\modules\User\Plugin\Menus.php) [175]
+Error Code: 377833
+Stack trace:
+#0 N:\home\localhost\www\application\modules\Core\Api\Menus.php(64): User_Plugin_Menus->onMenuInitialize_UserHomeView(Engine_Db_Table_Row)
+#1 N:\home\localhost\www\application\modules\Core\Api\Menus.php(23): Core_Api_Menus->getMenuParams('user_home', Array, )
+#2 N:\home\localhost\www\application\modules\User\widgets\home-links\Controller.php(31): Core_Api_Menus->getNavigation('user_home')
+#3 N:\home\localhost\www\application\libraries\Engine\Content\Widget\Abstract.php(254): User_Widget_HomeLinksController->indexAction()
+#4 N:\home\localhost\www\application\libraries\Engine\Content\Element\Widget.php(66): Engine_Content_Widget_Abstract->render()
+#5 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(583): Engine_Content_Element_Widget->_render()
+#6 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#7 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#8 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#9 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#10 N:\home\localhost\www\application\libraries\Engine\Content\Decorator\Children.php(31): Engine_Content_Element_Abstract->render()
+#11 N:\home\localhost\www\application\libraries\Engine\Content\Element\Abstract.php(594): Engine_Content_Decorator_Children->render('')
+#12 N:\home\localhost\www\application\libraries\Engine\Content.php(207): Engine_Content_Element_Abstract->render()
+#13 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(136): Engine_Content->render('user_index_home')
+#14 N:\home\localhost\www\application\libraries\Engine\Content\Controller\Action\Helper\Content.php(38): Engine_Content_Controller_Action_Helper_Content->render()
+#15 N:\home\localhost\www\application\libraries\Zend\Controller\Action\HelperBroker.php(277): Engine_Content_Controller_Action_Helper_Content->postDispatch()
+#16 N:\home\localhost\www\application\libraries\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#17 N:\home\localhost\www\application\libraries\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('homeAction')
+#18 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(946): Zend_Controller_Dispatcher_Standard->dispatch(Zend_Controller_Request_Http, Zend_Controller_Response_Http)
+#19 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#20 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#21 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#22 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#23 {main}
+
+2012-10-29T19:09:53+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 986872
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+
+2012-10-29T19:10:12+00:00 NOTICE (5): [8] Undefined variable: orientation (N:\home\localhost\www\application\modules\Core\layouts\scripts\default.tpl) [115]
+Error Code: 7885e9
+Stack trace:
+#0 N:\home\localhost\www\application\libraries\Zend\View.php(108): include('N:\home\localhost\www\applicatio...')
+#1 N:\home\localhost\www\application\libraries\Zend\View\Abstract.php(835): Zend_View->_run('N:\home\localhost\www\applicatio...')
+#2 N:\home\localhost\www\application\libraries\Zend\Layout.php(793): Zend_View_Abstract->render('default.tpl')
+#3 N:\home\localhost\www\application\libraries\Zend\Layout\Controller\Plugin\Layout.php(142): Zend_Layout->render()
+#4 N:\home\localhost\www\application\libraries\Zend\Controller\Plugin\Broker.php(331): Zend_Layout_Controller_Plugin_Layout->postDispatch(Zend_Controller_Request_Http)
+#5 N:\home\localhost\www\application\libraries\Zend\Controller\Front.php(957): Zend_Controller_Plugin_Broker->postDispatch(Zend_Controller_Request_Http)
+#6 N:\home\localhost\www\application\modules\Core\Bootstrap.php(75): Zend_Controller_Front->dispatch()
+#7 N:\home\localhost\www\application\libraries\Engine\Application.php(160): Core_Bootstrap->run()
+#8 N:\home\localhost\www\application\index.php(194): Engine_Application->run()
+#9 N:\home\localhost\www\index.php(27): include('N:\home\localhost\www\applicatio...')
+#10 {main}
+

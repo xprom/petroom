@@ -189,6 +189,37 @@
                 <?php echo $this->htmlLink('javascript:void(0);', $this->translate('Comment'), array('onclick'=>'document.getElementById("'.$this->commentForm->getAttrib('id').'").style.display = ""; document.getElementById("'.$this->commentForm->submit->getAttrib('id').'").style.display = "block"; document.getElementById("'.$this->commentForm->body->getAttrib('id').'").focus();')) ?>
             <?php endif; ?>
         <?php endif; ?>
+
+        <?php if( $this->viewer()->getIdentity() && (
+                $this->activity_moderate || (
+                  $this->allow_delete && (
+                    ('user' == $action->subject_type && $this->viewer()->getIdentity() == $action->subject_id) ||
+                    ('user' == $action->object_type && $this->viewer()->getIdentity()  == $action->object_id)
+                  )
+                )
+            ) ): ?> |
+              <?php echo $this->htmlLink(array(
+                'route' => 'default',
+                'module' => 'activity',
+                'controller' => 'index',
+                'action' => 'delete',
+                'action_id' => $action->action_id
+              ), $this->translate('Delete'), array('class' => 'smoothbox')) ?>
+          <?php endif; ?>
+
+          <?php // Share ?>
+          <?php if( $action->getTypeInfo()->shareable && $this->viewer()->getIdentity() ): ?>
+            <?php if( $action->getTypeInfo()->shareable == 1 && $action->attachment_count == 1 && ($attachment = $action->getFirstAttachment()) ): ?>
+                | <?php echo $this->htmlLink(array('route' => 'default', 'module' => 'activity', 'controller' => 'index', 'action' => 'share', 'type' => $attachment->item->getType(), 'id' => $attachment->item->getIdentity(), 'format' => 'smoothbox'), $this->translate('Share'), array('class' => 'smoothbox', 'title' => 'Share')) ?>
+            <?php elseif( $action->getTypeInfo()->shareable == 2 ): ?>
+                | <?php echo $this->htmlLink(array('route' => 'default', 'module' => 'activity', 'controller' => 'index', 'action' => 'share', 'type' => $subject->getType(), 'id' => $subject->getIdentity(), 'format' => 'smoothbox'), $this->translate('Share'), array('class' => 'smoothbox', 'title' => 'Share')) ?>
+            <?php elseif( $action->getTypeInfo()->shareable == 3 ): ?>
+                | <?php echo $this->htmlLink(array('route' => 'default', 'module' => 'activity', 'controller' => 'index', 'action' => 'share', 'type' => $object->getType(), 'id' => $object->getIdentity(), 'format' => 'smoothbox'), $this->translate('Share'), array('class' => 'smoothbox', 'title' => 'Share')) ?>
+            <?php elseif( $action->getTypeInfo()->shareable == 4 ): ?>
+                | <?php echo $this->htmlLink(array('route' => 'default', 'module' => 'activity', 'controller' => 'index', 'action' => 'share', 'type' => $action->getType(), 'id' => $action->getIdentity(), 'format' => 'smoothbox'), $this->translate('Share'), array('class' => 'smoothbox', 'title' => 'Share')) ?>
+            <?php endif; ?>
+          <?php endif; ?>
+
       </div>
 
       <div class='feed_item_date feed_item_icon <?php echo $icon_type ?>'>
@@ -205,49 +236,6 @@
                 });
               </script>
             <?php endif ?>
-          <?php endif; ?>
-          <?php if( $this->viewer()->getIdentity() && (
-                $this->activity_moderate || (
-                  $this->allow_delete && (
-                    ('user' == $action->subject_type && $this->viewer()->getIdentity() == $action->subject_id) ||
-                    ('user' == $action->object_type && $this->viewer()->getIdentity()  == $action->object_id)
-                  )
-                )
-            ) ): ?>
-            <li class="feed_item_option_delete">
-              <span>-</span>
-              <?php echo $this->htmlLink(array(
-                'route' => 'default',
-                'module' => 'activity',
-                'controller' => 'index',
-                'action' => 'delete',
-                'action_id' => $action->action_id
-              ), $this->translate('Delete'), array('class' => 'smoothbox')) ?>
-            </li>
-          <?php endif; ?>
-          <?php // Share ?>
-          <?php if( $action->getTypeInfo()->shareable && $this->viewer()->getIdentity() ): ?>
-            <?php if( $action->getTypeInfo()->shareable == 1 && $action->attachment_count == 1 && ($attachment = $action->getFirstAttachment()) ): ?>
-              <li class="feed_item_option_share">
-                <span>-</span>
-                <?php echo $this->htmlLink(array('route' => 'default', 'module' => 'activity', 'controller' => 'index', 'action' => 'share', 'type' => $attachment->item->getType(), 'id' => $attachment->item->getIdentity(), 'format' => 'smoothbox'), $this->translate('Share'), array('class' => 'smoothbox', 'title' => 'Share')) ?>
-              </li>
-            <?php elseif( $action->getTypeInfo()->shareable == 2 ): ?>
-              <li class="feed_item_option_share">
-                <span>-</span>
-                <?php echo $this->htmlLink(array('route' => 'default', 'module' => 'activity', 'controller' => 'index', 'action' => 'share', 'type' => $subject->getType(), 'id' => $subject->getIdentity(), 'format' => 'smoothbox'), $this->translate('Share'), array('class' => 'smoothbox', 'title' => 'Share')) ?>
-              </li>
-            <?php elseif( $action->getTypeInfo()->shareable == 3 ): ?>
-              <li class="feed_item_option_share">
-                <span>-</span>
-                <?php echo $this->htmlLink(array('route' => 'default', 'module' => 'activity', 'controller' => 'index', 'action' => 'share', 'type' => $object->getType(), 'id' => $object->getIdentity(), 'format' => 'smoothbox'), $this->translate('Share'), array('class' => 'smoothbox', 'title' => 'Share')) ?>
-              </li>
-            <?php elseif( $action->getTypeInfo()->shareable == 4 ): ?>
-              <li class="feed_item_option_share">
-                <span>-</span>
-                <?php echo $this->htmlLink(array('route' => 'default', 'module' => 'activity', 'controller' => 'index', 'action' => 'share', 'type' => $action->getType(), 'id' => $action->getIdentity(), 'format' => 'smoothbox'), $this->translate('Share'), array('class' => 'smoothbox', 'title' => 'Share')) ?>
-              </li>
-            <?php endif; ?>
           <?php endif; ?>
         </ul>
       </div>
